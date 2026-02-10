@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.aws.product.service.ProductService;
 
 @RestController
-@RequestMapping("/products")
+@RequestMapping("/items")
 public class ProductController {
 
 	@Autowired

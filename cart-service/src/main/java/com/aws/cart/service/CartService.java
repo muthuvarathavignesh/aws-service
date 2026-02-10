@@ -10,12 +10,15 @@ public class CartService {
 
 	@Value("${product.service.url}")
 	private String productServiceUrl;
-	
+
 	@Autowired
 	RestTemplate restTemplate;
 
 	public String getCartByUserId(String userId) {
-		String value  = restTemplate.getForObject(productServiceUrl + "/products/" + userId, String.class);
+		
+		System.out.println("Calling Product Service URL = " + productServiceUrl + "/items/" + userId);
+
+		String value = restTemplate.getForObject(productServiceUrl + "/items/" + userId, String.class);
 		return value;
 	}
 }
