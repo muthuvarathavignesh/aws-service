@@ -21,7 +21,7 @@ public class CartController {
 		return cartService.getCartByUserId(userId);
 	}
 
-	@GetMapping("/")
+	@GetMapping("")
 	public String geMessage() {
 		// Logic to retrieve the cart for the given userId
 		return "Welcome to Cart Service";
