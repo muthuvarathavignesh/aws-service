@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.aws.cart.service.CartService;
 
 @RestController
-@RequestMapping("/cart")
+@RequestMapping("/items")
 public class CartController {
 
 	@Autowired
@@ -19,5 +19,11 @@ public class CartController {
 	public String getCart(@PathVariable String userId) {
 		// Logic to retrieve the cart for the given userId
 		return cartService.getCartByUserId(userId);
+	}
+
+	@GetMapping("")
+	public String geMessage() {
+		// Logic to retrieve the cart for the given userId
+		return "Welcome to Cart Service";
 	}
 }

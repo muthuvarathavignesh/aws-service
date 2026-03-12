@@ -4,6 +4,8 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
+import com.aws.product.util.InstanceUtil;
+
 @Service
 public class ProductService {
 
@@ -12,6 +14,7 @@ public class ProductService {
 	}
 	
 	public String getProductById(String id) {
-		return "Product " + id;
+		String instance = InstanceUtil.getInstanceName();
+		return "Product " + id + " served by " + instance;
 	}
 }
